@@ -1,0 +1,10 @@
+<div class="joke" *ngIf="JokeData">
+  <div class="joke-title">{{ JokeData.body[0].setup }}</div>
+  <div class="joke-punchline" *ngIf="activePunchline" >{{ JokeData.body[0].punchline }}</div>
+
+  <div class="btn" (click)="showPunchLine()">PUNCH LINE</div>
+  <div class="btn" (click)="nextJoke()">ANOTHER JOKE</div>
+</div>
+<div class="">
+  sdasd
+</div>
