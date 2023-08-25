@@ -1,10 +1,18 @@
 <div class="joke" *ngIf="JokeData">
-  <div class="joke-title">{{ JokeData.body[0].setup }}</div>
-  <div class="joke-punchline" *ngIf="activePunchline" >{{ JokeData.body[0].punchline }}</div>
+  <div class="joke-section">
+    <div class="left">
+      <!-- <img src="assets/images/user/person-2.png" alt="User 2" > -->
+      <div class="joke-line joke-title">{{ JokeData.body[0].setup }}</div>
+    </div>
 
-  <div class="btn" (click)="showPunchLine()">PUNCH LINE</div>
+    <div class="right">
+      <!-- <img src="assets/images/user/person-1.png" alt="User 1" (click)="showPunchLine()"> -->
+      <div class="" (click)="showPunchLine()">Punch Line</div>
+
+      <div class="joke-line joke-punchline" *ngIf="activePunchline">
+        {{ JokeData.body[0].punchline }}
+      </div>
+    </div>
+  </div>
   <div class="btn" (click)="nextJoke()">ANOTHER JOKE</div>
-</div>
-<div class="">
-  sdasd
 </div>
